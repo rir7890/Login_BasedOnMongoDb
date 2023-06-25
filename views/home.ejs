@@ -1,0 +1,20 @@
+<!-- src/views/home.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="welcome">
+      <h3>Hello there, welcome.</h3>
+      <%if(locals.user){%>
+      <p>You are logged in as <%=user%></p>
+      <a href="/logout">Logout</a>
+      <%} else { %>
+      <a href="/login">Login</a>
+      <% } %>
+    </div>
+  </body>
+</html>
